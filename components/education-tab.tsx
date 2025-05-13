@@ -5,10 +5,6 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 export default function EducationTab() {
   return (
     <div className="space-y-4">
-      <p className="text-black text-sm">
-        Learn about the science behind wind prediction and the mathematical models used in this app.
-      </p>
-
       <Accordion type="single" collapsible defaultValue="item-1" className="w-full">
         <AccordionItem value="item-1">
           <AccordionTrigger className="text-sky-900">The Navier-Stokes Equation</AccordionTrigger>
@@ -28,9 +24,6 @@ export default function EducationTab() {
               <li>ρ is air density</li>
               <li>p is pressure</li>
             </ul>
-            <p className="mt-2">
-              The full 3D Navier-Stokes equations include additional terms for viscosity and external forces.
-            </p>
           </AccordionContent>
         </AccordionItem>
 
@@ -44,7 +37,7 @@ export default function EducationTab() {
               <li>We solve the equations to predict how wind will evolve over time</li>
               <li>We update our predictions as new data becomes available</li>
             </ol>
-            <p className="mt-2">More sophisticated models used by meteorologists also account for:</p>
+            <p className="mt-2">More sophisticated models also account for:</p>
             <ul className="list-disc pl-5 space-y-1 mt-2">
               <li>
                 <strong>Coriolis Effect:</strong> The Earth&apos;s rotation deflects moving air
