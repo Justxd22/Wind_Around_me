@@ -5,14 +5,14 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 export default function EducationTab() {
   return (
     <div className="space-y-4">
-      <p className="text-sky-700 text-sm">
+      <p className="text-black text-sm">
         Learn about the science behind wind prediction and the mathematical models used in this app.
       </p>
 
       <Accordion type="single" collapsible defaultValue="item-1" className="w-full">
         <AccordionItem value="item-1">
           <AccordionTrigger className="text-sky-900">The Navier-Stokes Equation</AccordionTrigger>
-          <AccordionContent className="text-sky-700 text-sm">
+          <AccordionContent className="text-black text-sm">
             <p>
               The Navier-Stokes equations are a set of partial differential equations that describe the motion of fluid
               substances. For wind prediction, we use a simplified 1D version that focuses on momentum conservation.
@@ -36,7 +36,7 @@ export default function EducationTab() {
 
         <AccordionItem value="item-2">
           <AccordionTrigger className="text-sky-900">How Wind Prediction Works</AccordionTrigger>
-          <AccordionContent className="text-sky-700 text-sm">
+          <AccordionContent className="text-black text-sm">
             <p>Wind prediction involves solving the Navier-Stokes equations numerically. In our simplified model:</p>
             <ol className="list-decimal pl-5 space-y-1 mt-2">
               <li>We start with current wind measurements at various points</li>
@@ -64,7 +64,7 @@ export default function EducationTab() {
 
         <AccordionItem value="item-3">
           <AccordionTrigger className="text-sky-900">Wind Vector Fields</AccordionTrigger>
-          <AccordionContent className="text-sky-700 text-sm">
+          <AccordionContent className="text-black text-sm">
             <p>The arrows on the map represent a wind vector field. Each arrow shows:</p>
             <ul className="list-disc pl-5 space-y-1 mt-2">
               <li>Direction: where the wind is blowing toward</li>
@@ -87,7 +87,7 @@ export default function EducationTab() {
 
         <AccordionItem value="item-4">
           <AccordionTrigger className="text-sky-900">The Beaufort Scale</AccordionTrigger>
-          <AccordionContent className="text-sky-700 text-sm">
+          <AccordionContent className="text-black text-sm">
             <p>
               The Beaufort scale is an empirical measure that relates wind speed to observed conditions. Developed in
               1805 by Sir Francis Beaufort, it helps describe wind intensity in standardized terms.

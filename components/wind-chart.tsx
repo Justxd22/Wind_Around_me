@@ -128,13 +128,18 @@ export default function WindChart({ windData }: WindChartProps) {
           </div>
           <div className="flex items-center gap-2">
             <div className="text-xl font-bold text-sky-900">{beaufortScale.force}</div>
-            <div className="text-sm text-sky-700">{beaufortScale.description}</div>
+            <div className="text-sm text-black">{beaufortScale.description}</div>
           </div>
         </CardContent>
       </Card>
 
-      <div className="h-[200px]">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+      <Card className="bg-sky-50 border-sky-100">
+      <CardContent className="p-4">
         <h3 className="text-sm font-medium text-sky-900 mb-2">Wind Speed Forecast (12 hours)</h3>
+        <div className="h-[180px]">
+
         <ResponsiveContainer width="100%" height="100%">
           <LineChart data={forecastData} margin={{ top: 5, right: 5, left: 0, bottom: 5 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="#e0f2fe" />
@@ -158,6 +163,9 @@ export default function WindChart({ windData }: WindChartProps) {
             />
           </LineChart>
         </ResponsiveContainer>
+        </div>
+          </CardContent>
+        </Card>
       </div>
     </div>
   )

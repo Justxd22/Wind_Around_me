@@ -159,7 +159,7 @@ export default function WindPrediction({ windData, center }: WindPredictionProps
 
       </div>
 
-      <div className="text-sm text-sky-700 bg-sky-50 p-3 rounded-md">
+      <div className="text-sm text-black bg-sky-50 p-3 rounded-md">
       <p>This prediction uses a simplified Navier-Stokes-based NWP model.</p>
         <p className="mt-2 font-medium">Storm Probability in this area: <span className="text-sky-900">{stormChance}</span></p>
       </div>

@@ -56,7 +56,8 @@ export default function LocationPermission({ setLocation }: LocationPermissionPr
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-sky-50 to-white p-4">
+    <div className="min-h-screen flex items-center justify-center p-4 bg-cover bg-center bg-no-repeat relative"
+    style={{ backgroundImage: "url('/above-clouds.jpg')" }}>
       <Card className="max-w-md w-full shadow-lg border-sky-100">
         <CardHeader className="bg-sky-50 border-b border-sky-100">
           <CardTitle className="text-sky-900 flex items-center gap-2">
@@ -66,7 +67,7 @@ export default function LocationPermission({ setLocation }: LocationPermissionPr
         </CardHeader>
         <CardContent className="pt-6 space-y-4">
           <p className="text-sky-700">
-            Wind Around Me needs your location to show wind data in your area. Your location is only used to fetch local
+            Needs your location to show wind data in your area. Your location is only used to fetch local
             wind information and is never stored.
           </p>
 
