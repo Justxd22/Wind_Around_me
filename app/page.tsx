@@ -11,6 +11,9 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Wind, MapPin, Info, BarChart, Clock } from "lucide-react"
 import "leaflet/dist/leaflet.css"
+import dynamic from "next/dynamic"
+
+const MapCard = dynamic(() => import("@/components/MapCard"), { ssr: false })
 
 export default function Home() {
   const [location, setLocation] = useState<{ lat: number; lon: number } | null>(null)
@@ -55,7 +58,7 @@ export default function Home() {
   }
 
   return (
-    <main className="min-h-screen p-4 md:p-8">
+    <main className="min-h-screen bg-gradient-to-b from-sky-50 to-white p-4 md:p-8">
       <div className="max-w-7xl mx-auto">
         <header className="mb-8">
           <h1 className="text-3xl md:text-4xl font-bold text-sky-900 flex items-center gap-2">
@@ -104,30 +107,7 @@ export default function Home() {
 
             </div>
 
-            <Card className="shadow-md border-sky-100">
- <CardHeader className="bg-sky-50 border-b border-sky-100">
-<CardTitle className="text-sky-900 flex items-center gap-2">
-      <MapPin className="h-5 w-5 text-blue-400" />
-      Wind Map
-    </CardTitle>
-  </CardHeader>
-  <CardContent className="p-0 h-[500px] relative">
-    {location && (
-      <MapContainer
-        center={[location.lat, location.lon]}
-        zoom={18}
-        style={{ height: "100%", width: "100%" }}
-      >
-            <TileLayer
-              attribution='&copy; <a href="https://www.thunderforest.com/">Thunderforest</a>'
-              url="https://{s}.tile.thunderforest.com/transport-dark/{z}/{x}/{y}.png"
-            />
-
-        {windData && <WindMap windData={windData} center={location} />}
-      </MapContainer>
-    )}
-  </CardContent>
-</Card>
+            {location && <MapCard location={location} windData={windData} />}
 
 
             <Card className="shadow-md border-sky-100">
